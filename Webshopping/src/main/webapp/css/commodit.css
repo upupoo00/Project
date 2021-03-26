@@ -1,0 +1,107 @@
+html,body{
+    height: 100%;
+}
+body{
+    background: #159f9f;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    font-size: 20px;
+}
+.top{
+   width: 100%;
+   height: 100px;
+   position: relative;
+   top: 20px;
+   z-index: 1;
+}
+.top-1{
+   position: relative;
+   width: 53%;
+   height: 50%;
+   margin-top: 20px;
+   margin-left: 100px;
+   opacity: 0.9;
+   float: left;
+}
+.top-2{
+   float: left;
+   margin-top: 25px;
+   margin-left: 150px;
+   height: 50%;
+}
+.top-3{
+   float: left;
+   margin-top: 27px;
+   margin-left: 20px;
+   height: 50%;
+}
+.button-top{
+display: inline-block;
+text-decoration: none;
+padding:0.1em 0.7em;
+background:linear-gradient(#338bd3, #7d7880);
+color: #ffffff;
+border-radius: 3px;
+border: 1px solid #9f9f9f;
+font-size:18px;
+}
+
+.button-top:hover, .button-top:active {
+text-decoration: none;
+background:linear-gradient(#f1edf3,#eadef1);
+}
+.input-top{
+    width:190px;
+    height:35px;
+    font-size:15px;
+    color:#fff;
+    border-radius: 12px;
+    color: black;
+}
+.center{
+    width: 52%;
+    height: 430px;
+    position: relative;
+    margin-left: 300px;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+.center-top{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    border: 0px solid red;
+    border-radius: 10px;
+    background-color: rgb(179, 240, 237);
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: 华文行楷;
+}
+.center-img{
+    width: 360px;
+    height: 355px;
+    position: relative;
+    float: left;
+    border-radius: 10px;
+    border: 0px solid red;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.center-img img{
+    position: relative;
+}
+.center-text{
+    width: 330px;
+    height: 355px;
+    position: relative;
+    float: left;
+    border: 0px solid red;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-family: 黑体;
+}

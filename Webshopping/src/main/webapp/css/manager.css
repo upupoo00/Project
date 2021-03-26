@@ -1,0 +1,240 @@
+html,body{
+    height: 100%;
+}
+body{
+    background: #159f9f;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    font-size: 20px;
+}
+.top{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: 20px;
+    z-index: 1;
+}
+.top-1{
+    position: relative;
+    width: 53%;
+    height: 50%;
+    margin-top: 20px;
+    margin-left: 100px;
+    opacity: 0.9;
+    float: left;
+}
+.top-2{
+    float: left;
+    margin-top: 25px;
+    margin-left: 150px;
+    height: 50%;
+}
+.top-3{
+    float: left;
+    margin-top: 27px;
+    margin-left: 20px;
+    height: 50%;
+}
+.button-top{
+    display: inline-block;
+    text-decoration: none;
+    padding:0.1em 0.7em;
+    background:linear-gradient(#338bd3, #7d7880);
+    color: #ffffff;
+    border-radius: 3px;
+    border: 1px solid #9f9f9f;
+    font-size:18px;
+}
+
+.button-top:hover, .button-top:active {
+    text-decoration: none;
+    background:linear-gradient(#f1edf3,#eadef1);
+}
+.input-top{
+    width:190px;
+    height:35px;
+    font-size:15px;
+    color:#fff;
+    border-radius: 12px;
+    color: black;
+}
+.center{
+    width: 85%;
+    height: 500px;
+    border: 1px solid rgb(226, 209, 209);
+    position: relative;
+    margin-top: 50px;
+    margin-left: 130px;
+    overflow:hidden;
+    background-color: rgb(254, 253, 255);
+    border-radius: 10px;
+}
+.center-1{
+    width: 100%;
+    height: 70px;
+}
+.span1{
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 黑体;
+    position: relative;
+    left: 60px;
+    top: 17px;
+}
+.center-2{
+    width: 90%;
+    height: 50px;
+    border: 1px solid rgb(168, 167, 167);
+    position: relative;
+    left: 60px;
+}
+.span2{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 黑体;
+    position: relative;
+    left: 350px;
+    top: 10px;
+}
+.button1{
+    height: 30px;
+    width: 80px;
+    background-color:cornflowerblue;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px #aaa;
+    border-radius: 5px;
+    outline: none;
+    position: relative;
+    left: 360px;
+    top: 6px;
+}
+.button1:hover{
+    background-color: darkblue;
+}
+.button1:active{
+    background-color: darkblue;
+    box-shadow: 0 3px #aaa;
+    transform: translateY(4px);
+}
+.center-3{
+    width: 90%;
+    height: 300px;
+    border: 0px solid rgb(255, 0, 0);
+    position: relative;
+    left: 60px;
+    top: 20px;
+}
+.center3-1{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(224, 224, 224);
+}
+.span3{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 黑体;
+    position: relative;
+    left: 30px;
+    top: 5px;
+}
+.center3-1{
+    width: 100%;
+    background-color: rgb(224, 224, 224);
+}
+.table1 td{
+    border: 1px solid rgb(168, 167, 167);
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 微软雅黑;
+    font-weight: 600;
+}
+.button2{
+    height: 30px;
+    width: 40px;
+    background-color:cornflowerblue;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px #aaa;
+    border-radius: 5px;
+    outline: none;
+    position: relative;
+    font-size: 13px;
+}
+.button2:hover{
+    background-color: darkblue;
+}
+.button2:active{
+    background-color: darkblue;
+    box-shadow: 0 3px #aaa;
+    transform: translateY(4px);
+}
+.button3{
+    height: 30px;
+    width: 40px;
+    background-color:rgb(255, 17, 0);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px #aaa;
+    border-radius: 5px;
+    outline: none;
+    position: relative;
+    font-size: 13px;
+}
+.button3:hover{
+    background-color: rgb(173, 51, 14);
+}
+.button3:active{
+    background-color: darkblue;
+    box-shadow: 0 3px #aaa;
+    transform: translateY(4px);
+}
+.center-4{
+    width: 100%;
+}
+.button4{
+    position: relative;
+    left: 400px;
+    top: 20px;
+    float: left;
+    margin-left: 20px;
+    height: 30px;
+    width: 80px;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px #aaa;
+    border-radius: 5px;
+    outline: none;
+}
+.button4:hover{
+    background-color: rgb(231, 231, 231);
+}
+.button4:active{
+    background-color: rgb(236, 236, 236);
+    box-shadow: 0 3px #aaa;
+    transform: translateY(4px);
+}

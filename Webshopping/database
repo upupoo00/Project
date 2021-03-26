@@ -1,0 +1,120 @@
+drop database if exists shopping;
+create database shopping;
+use shopping;
+drop table if exists user;
+drop table if exists commodit;
+drop table if exists card;
+create table user(
+uid int primary key auto_increment not null,
+username varchar(255) not null,
+phone varchar(255) not NULL,
+realname varchar(255) not null,
+sno int not null,
+dormitory varchar(255) not null,
+sex varchar(255) not null,
+password varchar(255) not null,
+type int default 1 not null
+)engine=innodb;
+
+create table commodit(
+sid int primary key auto_increment not null,
+name varchar(255) not null,
+level varchar(255) not null,
+remark varchar(255) not null,
+price double not null,
+sort varchar(255) not null,
+count int not null,
+uid int,
+image varchar(255) not null
+)engine=innodb;
+create table cart(
+cid int primary key auto_increment not null,
+uid int,
+sid int,
+count int
+)engine=innodb;
+
+insert into user(username,phone,realname,sno,dormitory,sex,password,type)values('a123456','13571351111','张三a',18166101,'12b-114','男','123456',0);
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('b123456','13571351111','张三b',18166102,'12b-115','女','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('c123456','13571351111','张三c',18166103,'12b-116','男','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('d123456','13571351111','张三d',18166103,'12b-116','男','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('e123456','13571351111','张三e',18166103,'12b-116','男','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('f123456','13571351111','张三f',18166103,'12b-116','男','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('g123456','13571351111','张三g',18166103,'12b-116','男','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('h123456','13571351111','张三h',18166103,'12b-116','男','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('i123456','13571351111','张三i',18166103,'12b-116','男','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('g123456','13571351111','张三j',18166103,'12b-116','男','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('k123456','13571351111','张三k',18166103,'12b-116','男','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('l123456','13571351111','张三l',18166103,'12b-116','男','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('m123456','13571351111','张三m',18166103,'12b-116','男','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('n123456','13571351111','张三n',18166103,'12b-116','男','123456');
+insert into user(username,phone,realname,sno,dormitory,sex,password)values('o123456','13571351111','张三o',18166103,'12b-116','男','123456');
+
+
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('Apple iphone 12','八成','卖家:XX（联系:11111111）',5499,'手机',1,1,'主页苹果手机.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('ELLE时尚女包','八成','卖家:XX（联系:11111111）',319.0,'女包',1,1,'主页女包.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('我的精神家园','八成','卖家:XX（联系:11111111）',40.0,'图书',2,2,'主页书.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('TENMA收纳盒','九成','卖家:XX（联系:11111111）',79.0,'生活用品',2,2,'主页收纳盒.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('uti尤缇秋长袖T恤','九成','卖家:XX（联系:11111111）',79.0,'女装:(上装)',2,3,'主页女装.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('日着原创设计师女装','九成','卖家:XX（联系:11111111）',499.0,'女装:(上装)',2,3,'女上装1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('海青蓝女装春秋印花','九成','卖家:XX（联系:11111111）',469.0,'女装:(上装)',2,3,'女上装2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('2021新款运动裤','九成','卖家:XX（联系:11111111）',99.0,'女装:(下装)',2,4,'女下装1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('爱路喜女哈伦裤','九成','卖家:XX（联系:11111111）',118.0,'女装:(下装)',2,4,'女下装2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('连衣裙女法式连衣裙','九成','卖家:XX（联系:11111111）',149.0,'女装:(裙子)',1,5,'裙子1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('馨诗雅悦连衣裙','九成','卖家:XX（联系:11111111）',168.0,'女装:(裙子)',1,5,'裙子2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('FILA斐乐女鞋小白鞋','九成','卖家:XX（联系:11111111）',309.0,'女鞋',2,6,'女鞋1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('彩姿妮马丁靴女中筒靴','九成','卖家:XX（联系:11111111）',129.0,'女鞋',2,6,'女鞋2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('南极人卫衣男春季','九成','卖家:XX（联系:11111111）',99.0,'男装:(上装)',2,7,'男上装1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('马克华菲潮牌棉衣男','九成','卖家:XX（联系:11111111）',729.0,'男装:(上装)',2,7,'男上装2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('南极人卫衣男春季','九成','卖家:XX（联系:11111111）',469.0,'男装:(上装)',2,8,'男上装1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('Matri牛仔裤韩版','九成','卖家:XX（联系:11111111）',99.0,'男装:(下装)',2,8,'男下装1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('古莱登运动裤男','九成','卖家:XX（联系:11111111）',99.0,'男装:(下装)',2,9,'男下装2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('361度男鞋跑步鞋','九成','卖家:XX（联系:11111111）',119.0,'男鞋',2,9,'男鞋1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('李宁篮球鞋闪击6','九成','卖家:XX（联系:11111111）',638.0,'男鞋',2,10,'男鞋2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('索尼  Alpha 7','九成','卖家:XX（联系:11111111）',17299.0,'相机',2,10,'相机1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('索尼  Alpha 7CL','九成','卖家:XX（联系:11111111）',14099.0,'相机',2,11,'相机2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('倍思 手机指环扣','九成','卖家:XX（联系:11111111）',36.0,'手机配件',2,11,'手机配件1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('手机支架','九成','卖家:XX（联系:11111111）',18.0,'手机配件',2,12,'手机配件2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('Lola Rose小绿表手表','九成','卖家:XX（联系:11111111）',1280.0,'手表',2,12,'手表1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('Dickies 手表女','九成','卖家:XX（联系:11111111）',319.0,'手表',2,13,'手表2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('美的 麒麟净水器','九成','卖家:XX（联系:11111111）',1680.0,'生活电器',2,13,'生活家电1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('海尔 挂烫机','九成','卖家:XX（联系:11111111）',255.0,'生活电器',2,15,'生活家电2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('香柚小镇 香皂盒子','九成','卖家:XX（联系:11111111）',13.9,'生活用品',2,15,'生活用品1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values(' 海尔 挂烫机','九成','卖家:XX（联系:11111111）',255.0,'生活用品',2,13,'生活用品2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('家庭影院 电视音响','九成','卖家:XX（联系:11111111）',6099.0,'影音娱乐',2,14,'影音家电1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('瑞视达T1手机投影仪','九成','卖家:XX（联系:11111111）',299.0,'影音娱乐',2,14,'影音家电2.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('NS体感游戏机掌机','九成','卖家:XX（联系:11111111）',2099.0,'影音娱乐',2,16,'游戏设备1.jpg');
+insert into commodit(name,level,remark,price,sort,count,uid,image)values('PC工程师掌上电脑','九成','卖家:XX（联系:11111111）',2599.0,'影音娱乐',2,16,'游戏设备2.jpg');
+
+
+
+insert into cart(uid,sid,count)values(1,2,2);
+insert into cart(uid,sid,count)values(1,3,1);
+insert into cart(uid,sid,count)values(2,4,1);
+insert into cart(uid,sid,count)values(2,5,1);
+insert into cart(uid,sid,count)values(3,6,1);
+insert into cart(uid,sid,count)values(3,7,1);
+insert into cart(uid,sid,count)values(4,8,1);
+insert into cart(uid,sid,count)values(4,9,1);
+insert into cart(uid,sid,count)values(5,10,1);
+insert into cart(uid,sid,count)values(5,1,1);
+insert into cart(uid,sid,count)values(6,2,1);
+insert into cart(uid,sid,count)values(6,3,1);
+insert into cart(uid,sid,count)values(7,4,1);
+insert into cart(uid,sid,count)values(7,5,1);
+insert into cart(uid,sid,count)values(8,6,1);
+insert into cart(uid,sid,count)values(8,7,1);
+insert into cart(uid,sid,count)values(9,8,1);
+insert into cart(uid,sid,count)values(9,9,1);
+insert into cart(uid,sid,count)values(10,10,1);
+insert into cart(uid,sid,count)values(10,11,1);
+insert into cart(uid,sid,count)values(11,12,1);
+insert into cart(uid,sid,count)values(11,13,1);
+insert into cart(uid,sid,count)values(12,14,1);
+insert into cart(uid,sid,count)values(12,15,1);
+
+
+
+select * from user;
+select * from commodit;
+select * from cart;
