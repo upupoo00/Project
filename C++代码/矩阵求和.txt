@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+class Matrix
+{
+public:
+    Matrix();
+    friend Matrix operator+(Matrix &,Matrix &);
+    friend ostream& operator<<(ostream&,Matrix&);
+    friend istream& operator>>(istream&,Matrix&);
+private:
+    int mat[2][3];
+};
+Matrix::Matrix()
+{int i=0,j=0;
+for(;i<2;i++)
+for(;j<3;j++)
+mat[i][j]=0;
+}
+ 
+ 
+Matrix operator+(Matrix &m1,Matrix &m2)
+{
+    Matrix m;
+    int i,j;
+    for(i=0; i<2; i++)
+    {
+        for(j=0; j<3; j++)
+            m.mat[i][j]=m1.mat[i][j]+m2.mat[i][j];
+    }
+    return m;
+}
+ostream& operator<<(ostream&out,Matrix&m)
+{
+    int i,j;
+    for(i=0; i<2; i++)
+          {for(j=0; j<3; j++)
+            out<<m.mat[i][j]<<" ";
+            cout<<endl;}
+    return out;
+}
+istream& operator>>(istream&in,Matrix&m)
+{
+    int i,j;
+    for(i=0; i<2; i++)
+        for(j=0; j<3; j++)
+            in>>m.mat[i][j];
+    return in;
+}
+int main()
+{
+    Matrix a,b,c;
+    cin>>a;
+    cin>>b;
+    c=a+b;
+    cout<<c<<endl;
+    return 0;
+}
