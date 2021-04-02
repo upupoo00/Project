@@ -1,0 +1,83 @@
+#include <iostream>
+using namespace std;
+class Cube_volume
+{
+public:
+    void set_cube();
+    void volume_cube();
+    void shou_cube();
+private:
+    int length;
+    int width;
+    int height;
+    int volume;
+};
+void Cube_volume::set_cube()
+{
+    cout<<"Please enter cube length, width, height: ";
+    cin>>length>>width>>height;
+}
+void Cube_volume::volume_cube()
+{
+    volume=length*width*height;
+}
+void Cube_volume::shou_cube()
+{
+    cout<<"Volume= "<<volume<<endl;
+}
+int main()
+{
+    Cube_volume cube[3];
+    int i;
+    for (i=0; i<3; i++){
+        cube[i].set_cube();
+        cube[i].volume_cube();
+        cube[i].shou_cube();
+    }
+    system("pause");
+    return 0;
+}
+
+
+
+
+
+
+
+text2
+
+
+#include<iostream>
+using namespace std;
+class Cube
+{public:
+ void data();
+ void show();
+private:
+	double length;
+	double height;
+	double width;
+	double qinshabi();
+};
+void Cube::data()
+{cout<<"请分别输入长宽高："<<endl;
+cin>>length>>width>>height;}
+ double Cube::qinshabi()
+ {return length*width*height;
+ }
+void Cube::show()
+{cout<<"长方形体积："<<qinshabi()<<endl;};
+ int main()
+ {Cube cube1;
+  cube1.data();
+  cube1.show();
+  Cube cube2;
+  cube2.data();
+  cube2.show();
+  Cube cube3;
+  cube3.data();
+  cube3.show();
+  return 0;
+ }
+
+
