@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 689 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\acer\AppData\Local\Temp\RSPE654.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/689.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"D:\689\689.cpp"
+"D:\689\689View.cpp"
+]
+Creating command line "cl.exe @C:\Users\acer\AppData\Local\Temp\RSPE654.tmp" 
+Creating temporary file "C:\Users\acer\AppData\Local\Temp\RSPE655.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/689.pdb" /debug /machine:I386 /out:"Debug/689.exe" /pdbtype:sept 
+.\Debug\689.obj
+.\Debug\StdAfx.obj
+.\Debug\MainFrm.obj
+.\Debug\ChildFrm.obj
+.\Debug\689Doc.obj
+.\Debug\689View.obj
+.\Debug\689.res
+]
+Creating command line "link.exe @C:\Users\acer\AppData\Local\Temp\RSPE655.tmp"
+<h3>Output Window</h3>
+Compiling...
+689View.cpp
+Generating Code...
+Skipping... (no relevant changes detected)
+689.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+689.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
