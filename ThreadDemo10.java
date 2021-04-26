@@ -28,12 +28,26 @@ package Java_0318;
  * 1.抢占式执行(这个没法解决，操作系统内核实现)
  * 2.自增操作非原子(这个有办法，可以给自增操作加上锁) -->适用范围最广
  * 3.多个线程同时修改同一个变量(这个能不能有办法，不一定。得看具体的绣需求)
+ *
+ * 理解synchronized具体使用
+ * 用法可以灵活的指定某个对象来加锁，而不仅仅是把锁加到某个方法上
+ * 如果吧synchronized关键字写到方法前，相当于给当前对象(this)来加锁
+ * 所谓的加锁，其实是给某个指定的对象加锁
+ *
+ * synchronized几种常见用法
+ * 1.加到普通方法前：表示this
+ * 2.加到静态方法前：表示锁当前类的类对象
+ * 3.加到某个代码块之前：显示指定给某个对象加锁
  * 
  */
 public class ThreadDemo10 {
     static class Counter{
         public int count = 0;
-        public void increase(){
+        //进入increase方法之前会先尝试加锁
+        // increase方法执行完毕之后会自动解锁
+        // 加锁解锁都由一个关键字来包办了，这样的
+        // 好处就是避免出现忘记解锁的情况
+        synchronized public void increase(){
             count++;
         }
     }
@@ -64,7 +78,7 @@ public class ThreadDemo10 {
           t2.join();
 
           //两个线程，各自自增 5w次，最终预期结果 ,应该是10w
-          //际结果 取值为[5w,10w]
+          //实际结果 取值为[5w,10w]
           //
         System.out.println(counter.count);
     }
