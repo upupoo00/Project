@@ -18,10 +18,21 @@ import java.util.concurrent.LinkedBlockingQueue;
  *           第三种：创建可以执行定时任务的线程池
  *           第四种：创建单线程执行定时任务的线程池
  *           第五种：创建单个线程
- *           第六种：根据当前的硬件生成对应个数的线程池，并且是异步执行的
+ *           第六种：根据当前的硬件生成对应个数的线程池，并且是异步执行的，最大生成数为CPU核数
+ *           第七种：（推荐方式）原始的线程池创建方式ThreadPool方式
  *如果使用前6种创建线程池的方式会导致的问题
  * 1.线程数量不可控（比如创建带缓存的线程池）
  * 2.工作量不可控，可能会造成内存溢出
+ *
+ * 线程池的五种拒绝策略
+ * 1.不执行任务，抛出异常  ThreadPoolExecutor.AbortPolicy()
+ * 2.把当前任务交给主线程执行 ThreadPoolExecutor.CallerRunsPolicy()
+ * 3.丢弃最老的任务 ThreadPoolExecutor.DiscardOldestPolicy()
+ * 4.丢弃最新的任务  ThreadPoolExecutor.DiscardPolicy()
+ *
+ * 线程池执行的2种方式：
+ * 1.执行任务无返回值 excute(new Runnable...)
+ * 2.执行任务有返回值sumbit(Runnable 无返回值/ Callable 有返回值)
  */
 public class ThreadDemo21 {
     //使用这个类来描述当前的工作线程是啥样的
